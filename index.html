@@ -7,43 +7,85 @@
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
     <body>
+        <div class="scroll-progress"></div>
+        <script>
+            window.onscroll = function () {
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollPercentage = (scrollTop / scrollHeight) * 100;
+                document.querySelector(".scroll-progress").style.width = scrollPercentage + "%";
+            };
+        </script>
+        <!-- Progress Bar -->
+<div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+
+<script>
+    window.onscroll = function() {
+        let winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+</script>
+<!-- Scroll Arrow -->
+<div id="scrollArrow">↓</div>
+
+<script>
+    let scrollArrow = document.getElementById("scrollArrow");
+
+    window.addEventListener("scroll", function () {
+        let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrollPosition = document.documentElement.scrollTop;
+
+        // If at the bottom, change to ↑, otherwise keep ↓
+        if (scrollPosition >= scrollHeight - 50) {
+            scrollArrow.innerHTML = "↑"; 
+        } else {
+            scrollArrow.innerHTML = "↓";
+        }
+    });
+
+    // Click event for scrolling
+    scrollArrow.onclick = function () {
+        if (scrollArrow.innerHTML === "↑") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+            window.scrollBy({ top: window.innerHeight / 2, behavior: "smooth" });
+        }
+    };
+</script>
+
     
         <!-- Navigation Bar -->
-        <nav>
-            <div class="menu">
-                <div class="logo"><a href="#">ℜ𝔜</a></div>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/rohit-yakkundi-78380720b">LinkedIn</a></li>
-                    <li><a href="https://github.com/rohit9481">GitHub</a></li>
-                    <li><a href="https://x.com/YakkundiRo50431">Twitter/X</a></li>
-                </ul>
-            </div>
-        </nav>
+        <!-- Navigation Bar -->
+<nav>
+    <div class="menu">
+        <div class="logo"><a href="#">ℜ𝔜</a></div>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/rohit-yakkundi-78380720b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/rohit9481" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://x.com/YakkundiRo50431" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
+        </ul>
+    </div>
+</nav>
+
     
         <!-- Main Section -->
         <main class="main-section">
             <div class="content">
               <div class="p">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                <br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br>
                 <h1>ROHIT YAKKUNDI</h1>
                 <p>B.Tech Computer Science student at PESU with a passion for problem-solving and innovation. Skilled in algorithms, adaptable, and eager to contribute to team success. Strong in communication, collaboration, and quick learning, with a commitment to continuous growth.</p>
               </div>
                 <div class="btns"> 
                     <a href="Resume.html"><button>Resume</button></a>
                     <a href="projects.html"><button>Projects</button></a>
+                <br><br><br><br><br>
                 </div>
             </div>
         </main>
@@ -52,7 +94,8 @@
         <section class="hero">
             <h1>My Skills</h1>
             <br><br>
-    
+
+            
             <div class="skills-box">
                 <div class="skills-container">
                     <div class="skill-bubble" style="background-image: url('myskills/java.png');">Java</div>
