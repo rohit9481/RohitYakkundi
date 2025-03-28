@@ -57,7 +57,7 @@ nav .menu{
 .img{
   background: url('newbg.png')no-repeat;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -571,7 +571,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full screen height */
+  height: 94vh; /* Full screen height */
   text-align: center;
   background: url('newbg.png') no-repeat center center/cover; /* Background Image */
 }
@@ -589,7 +589,7 @@ body {
 
 /* Buttons */
 .btns {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .btns button {
@@ -631,7 +631,7 @@ body {
 }/* Skills Section */
 .hero {
   background-color: #222;
-  padding: 50px 0;
+  padding: 5px 0;
   text-align: center;
   color: white;
 }
